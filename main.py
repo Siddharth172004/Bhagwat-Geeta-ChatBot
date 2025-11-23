@@ -19,7 +19,7 @@ parser = StrOutputParser()
 
 embedding = HuggingFaceEmbeddings(model_name= "sentence-transformers/all-MiniLM-L6-v2")
 
-db = FAISS.load_local(r"C:\Users\Siddharth\OneDrive\Desktop\Llm Project\Vector Data",embedding ,allow_dangerous_deserialization= True)
+db = FAISS.load_local("Vector Data",embedding ,allow_dangerous_deserialization= True)
 
 retriver = db.as_retriever(
     search_type= "mmr",

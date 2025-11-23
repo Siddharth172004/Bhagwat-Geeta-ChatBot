@@ -37,4 +37,4 @@ for chunk in all_chunks:
     documents.append(doc_a)
 
 db = FAISS.from_documents(documents, embeddings)
-db.save_local(r"C:\Users\Siddharth\OneDrive\Desktop\Llm Project\Vector Data")
+db.save_local("Vector Data")
