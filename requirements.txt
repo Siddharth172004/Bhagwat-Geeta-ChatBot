@@ -1,0 +1,10 @@
+streamlit==1.49.1
+openai==2.6.1
+python-dotenv==1.1.1
+langchain==1.0.8
+langchain-core==1.0.7
+langchain-community==0.3.29
+langchain-openai==1.0.1
+langchain-huggingface==1.0.1
+sentence-transformers==5.1.2
+faiss-cpu==1.12.0
