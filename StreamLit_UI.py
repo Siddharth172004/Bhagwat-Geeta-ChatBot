@@ -1,9 +1,9 @@
 import streamlit as st
 from main import call_ui
 
-st.set_page_config(page_title="Bhagwat Geeta Chatbot", page_icon="📜", layout="centered")
+st.set_page_config(page_title="Bhagwat Gita Chatbot", page_icon="📜", layout="centered")
 
-st.title("🕉 Bhagwat Geeta Chatbot 🕉")
+st.title("🕉 Bhagwat Gita Chatbot 🕉")
 
 user_input = st.text_input("📜Discover clarity and peace – ask your question to the Geeta...")
 
