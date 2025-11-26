@@ -17,9 +17,9 @@ for doc in data:
     content = doc.page_content
     if isinstance(content, str):
         content = json.loads(content)
-        doc.page_content = content   
+        doc.page_content = content
 
-    combined = content.get("HinMeaning", "") + " || " + content.get("EngMeaning", "") + " || " + content.get("PurPort","")
+    combined = content.get("Preface", "") + " || " + content.get("Introduction", "") + " || " + content.get("Shloka", "") + " || " + content.get("HinMeaning", "") + " || " + content.get("EngMeaning", "") + " || " + content.get("PurPort","")
 
     all_chunks.append({
         "text": combined,
@@ -31,7 +31,7 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 documents = []
 for chunk in all_chunks:
     doc_a = Document(
-        page_content=chunk["text"],
+        page_content=chunk["text"] + "\n\n",
         metadata={"original_text": chunk["metadata"]}
     )
     documents.append(doc_a)

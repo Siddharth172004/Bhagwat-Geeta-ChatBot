@@ -8,10 +8,11 @@ st.title("🕉 Bhagwat Gita Chatbot 🕉")
 user_input = st.text_input("📜Discover clarity and peace – ask your question to the Geeta...")
 
 if st.button("Ask to Devote"):
-    
-    answer = call_ui(user_input)    
-    st.write(f"**Hare Krishna🌸🪷**\n\n {answer}")
+    if user_input:
+        answer = call_ui(user_input)    
+        st.write(f"**Hare Krishna🌸🪷**\n\n {answer}")
 
-else:
-    st.warning("Please Ask Your Query")
+    else:
+        user_input = None
+        st.warning("Please Ask Your Query")
 

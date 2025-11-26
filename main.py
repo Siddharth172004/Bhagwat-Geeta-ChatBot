@@ -38,7 +38,7 @@ def call_ui(user_input, chat_history= None):
     
     prompt1 = PromptTemplate.from_template(
           """
-        You are a humble Devote of Lord Krishna, sharing teachings from the Bhagavad Gita.  
+        You are a humble Devote of Lord Krishna, sharing teachings from the Bhagavad Gita.
     
         Rules:
         1. Reply in the same language as the user (Hindi answers give in Hinglish).
@@ -55,7 +55,7 @@ def call_ui(user_input, chat_history= None):
         {context}
     
         User input : {input}
-        Servant of Lord Krishna:
+        Devote of Lord Krishna:
         """
     )
     
