@@ -60,7 +60,7 @@ streamlit run StreamLit_UI.py
 ```
 
 Open the link provided by Streamlit (usually **http://localhost:8501**)  
-Ask questions in **English or Hindi** and receive deep, context-aware spiritual answers.
+Ask questions in **English/Hindi Or any other language** and receive deep, context-aware spiritual answers.
 
 ---
 
