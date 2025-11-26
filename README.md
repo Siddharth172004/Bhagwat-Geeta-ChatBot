@@ -39,7 +39,7 @@ A premium conversational AI chatbot built on the timeless wisdom of the Bhagwat 
 ## 🛠 **Installation**
 
 ```bash
-git clone https://github.com/your-username/Bhagwat-Geeta-Chatbot.git
+git clone https://github.com/Siddharth172004/Bhagwat-Geeta-ChatBot
 cd Bhagwat-Geeta-Chatbot
 
 python -m venv venv
