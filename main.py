@@ -1,4 +1,4 @@
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
@@ -8,10 +8,9 @@ import os
 
 load_dotenv()
 
-model = ChatOpenAI(
-    model="tngtech/deepseek-r1t2-chimera:free",
-    openai_api_key=os.getenv("OPENROUTER_API_KEY"),
-    openai_api_base="https://openrouter.ai/api/v1",
+model = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
+    google_api_key=os.getenv("OPENROUTER_API_KEY"),
     temperature = 0.7
 )
 
@@ -61,9 +60,9 @@ def call_ui(user_input, chat_history= None):
     
     
     chain = prompt1 | model | parser
-    
-    result = chain.invoke({"context" : context ,"input" : user_input})
-    
-    return result
-
+    try:
+        result = chain.invoke({"context" : context ,"input" : user_input})
+        return result
+    except Exception:
+        return "Something went wrong please try again later :("
 
